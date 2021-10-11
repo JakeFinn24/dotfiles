@@ -565,7 +565,7 @@ globalkeys = mytable.join(
               end,
               {description = "lua execute prompt", group = "awesome"})
     --]]
-    ppp
+
 )
 
 clientkeys = mytable.join(
