@@ -94,7 +94,7 @@ local themes = {
     "powerarrow-dark", -- 7
     "rainbow",         -- 8
     "steamburn",       -- 9
-    "vertex"           -- 10
+    "vertex"          -- 10
 }
 
 local chosen_theme = themes[7]

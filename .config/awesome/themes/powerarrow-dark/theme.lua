@@ -17,8 +17,8 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
 theme.wallpaper                                 = theme.dir .. "/wall.png"
-theme.font                                      = "DejaVuSansMono 9"
-theme.fg_normal                                 = "#DDDDFF"
+theme.font                                      = "DejaVuSansMono 10"
+theme.fg_normal                                 = "#8fffd0"
 theme.fg_focus                                  = "#EA6F81"
 theme.fg_urgent                                 = "#CC9393"
 theme.bg_normal                                 = "#1A1A1A"
@@ -32,8 +32,8 @@ theme.tasklist_bg_focus                         = "#1A1A1A"
 theme.titlebar_bg_focus                         = theme.bg_focus
 theme.titlebar_bg_normal                        = theme.bg_normal
 theme.titlebar_fg_focus                         = theme.fg_focus
-theme.menu_height                               = dpi(16)
-theme.menu_width                                = dpi(140)
+theme.menu_height                               = dpi(25)
+theme.menu_width                                = dpi(200)
 theme.menu_submenu_icon                         = theme.dir .. "/icons/submenu.png"
 theme.taglist_squares_sel                       = theme.dir .. "/icons/square_sel.png"
 theme.taglist_squares_unsel                     = theme.dir .. "/icons/square_unsel.png"
@@ -68,7 +68,7 @@ theme.widget_mail                               = theme.dir .. "/icons/mail.png"
 theme.widget_mail_on                            = theme.dir .. "/icons/mail_on.png"
 theme.tasklist_plain_task_name                  = true
 theme.tasklist_disable_icon                     = true
-theme.useless_gap                               = dpi(0)
+theme.useless_gap                               = dpi(5)
 theme.titlebar_close_button_focus               = theme.dir .. "/icons/titlebar/close_focus.png"
 theme.titlebar_close_button_normal              = theme.dir .. "/icons/titlebar/close_normal.png"
 theme.titlebar_ontop_button_focus_active        = theme.dir .. "/icons/titlebar/ontop_focus_active.png"
@@ -106,7 +106,7 @@ local clock = awful.widget.watch(
 theme.cal = lain.widget.cal({
     attach_to = { clock },
     notification_preset = {
-        font = "Terminus 10",
+        font = "DejaVuSansMono 10",
         fg   = theme.fg_normal,
         bg   = theme.bg_normal
     }
@@ -327,7 +327,7 @@ function theme.at_screen_connect(s)
             volicon,
             theme.volume.widget,
             arrl_ld,
-            wibox.container.background(mailicon, theme.bg_focus),
+            --wibox.container.background(mailicon, theme.bg_focus),
             --wibox.container.background(theme.mail.widget, theme.bg_focus),
             arrl_dl,
             memicon,
@@ -339,11 +339,11 @@ function theme.at_screen_connect(s)
             tempicon,
             temp.widget,
             arrl_ld,
-            wibox.container.background(fsicon, theme.bg_focus),
+            --wibox.container.background(fsicon, theme.bg_focus),
             --wibox.container.background(theme.fs.widget, theme.bg_focus),
             arrl_dl,
-            baticon,
-            bat.widget,
+            --baticon,
+            --bat.widget,
             arrl_ld,
             wibox.container.background(neticon, theme.bg_focus),
             wibox.container.background(net.widget, theme.bg_focus),
